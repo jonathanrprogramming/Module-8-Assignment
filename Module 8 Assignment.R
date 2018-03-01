@@ -1,0 +1,6 @@
+install.packages("plyr")
+plyr::ddply(ddply(x,"Sex",transform, Grade.Average=mean(Grade))
+y=ddply(x,"Sex",transform, Grade.Average=mean(Grade))
+write.table(y,"Sorted_Average")
+newx = subset(x,grepl("[iI]",x$Name))
+write.table(newx,"DataSubset",sep=",")
